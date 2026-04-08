@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#050505">
-    <title>Keorapetse Tlhapane | Data Analyst</title>
+    <title>Projects | Keorapetse Tlhapane</title>
     
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="styles.css">
@@ -14,64 +14,46 @@
 </head>
 <body>
     <div class="floating-contact">
-        <a href="https://wa.me/27663300303" class="neon-btn icon-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:keotlhapane011@gmail.com" class="neon-btn icon-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/27663300304" class="neon-btn icon-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <nav>
         <div class="logo">KT<span>.</span></div>
         <div class="nav-links">
-            <a href="index.html" class="active">Home & About</a>
-            <a href="projects.html">Data Projects</a>
+            <a href="index.html">Home & About</a>
+            <a href="projects.html" class="active">Data Projects</a>
             <a href="mailto:keotlhapane011@gmail.com" class="contact-link">Contact</a>
         </div>
     </nav>
 
-    <header class="hero hidden">
-        <div class="hero-content">
-            <h2 class="neon-text-purple">Actionable Intelligence</h2>
-            <h1>Keorapetse Tlhapane</h1>
-            <p class="subtitle">Transforming complex datasets into executive decision-making power.</p>
-            <div class="hero-buttons">
-                <a href="projects.html" class="neon-btn primary">View Dashboards</a>
-                <a href="https://wa.me/27663300303" class="neon-btn secondary">WhatsApp Me</a>
-            </div>
-        </div>
-    </header>
+    <section class="portfolio-section hidden">
+        <h1 class="neon-text-purple text-center">Data Architectures & Dashboards</h1>
+        <p class="text-center mb-3">Click on the technologies below to view the inner workings without leaving this page.</p>
 
-    <section class="about-section hidden">
-        <div class="about-grid">
-            <div class="about-image-container">
-                <img src="founder.jpg" alt="Keorapetse Tlhapane" class="founder-img" loading="lazy">
-                <div class="glow-ring"></div>
-            </div>
-            <div class="about-text">
-                <h2 class="neon-text-cyan">The Objective</h2>
-                <p>To bridge the gap between raw data and strategic growth, I leverage statistical modeling and visualization to transform complex datasets into actionable intelligence. My objective is to provide the evidence-based clarity needed to optimize operations, mitigate risks, and drive informed executive decision-making.</p>
-                
-                <h2 class="neon-text-cyan mt-2">The Narrative</h2>
-                <p>I thrive on the "eureka" moment of finding a hidden narrative within a sea of raw numbers. To me, data analysis is a blend of investigative problem-solving and storytelling; I love the challenge of taking fragmented, messy information and distilling it into a clear, strategic roadmap. There is an immense sense of satisfaction in providing the clarity that transforms a complex business uncertainty into a confident, evidence-based decision.</p>
-
-                <div class="credentials mt-2">
-                    <div class="edu-card">
-                        <i class="fas fa-graduation-cap neon-text-purple"></i>
-                        <div>
-                            <h3>EMERIS RUIMSIG</h3>
-                            <p>BSc Computer & Information Sciences (2025 – Present)</p>
-                        </div>
-                    </div>
-                    <div class="skills-card">
-                        <i class="fas fa-code neon-text-cyan"></i>
-                        <p><strong>Core Stack:</strong> Excel, SQL, Power BI, Tableau, Python, R</p>
-                    </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-thumb">
+                    <img src="Layoffs-1200.jpg" alt="Tech Layoffs Analysis" loading="lazy">
+                    <div class="overlay">MySQL Data Cleaning & EDA</div>
                 </div>
-
-                <div class="action-buttons mt-2">
-                    <a href="Keorapetse Tlhapane Data Analyst CV.pdf" target="_blank" class="neon-btn outline"><i class="fas fa-file-pdf"></i> View CV</a>
-                    <a href="certificates.pdf" target="_blank" class="neon-btn outline"><i class="fas fa-certificate"></i> Certificates</a>
+                <div class="project-info">
+                    <h3>Global Tech Layoffs Pipeline</h3>
+                    <p>Built a robust SQL staging environment to clean raw dataset. Utilized Common Table Expressions (CTEs) and Window Functions to extract rolling trends and rank peak corporate layoffs by year.</p>
+                    <div class="tech-stack-buttons">
+                        <button class="neon-chip" onclick="openModal('sql', 'project2')">View SQL Architecture</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="dataModal" class="modal" aria-hidden="true">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeModal()" aria-label="Close">&times;</span>
+            <h2 id="modalTitle" class="neon-text-cyan">Project Data</h2>
+            <div id="modalBody" class="modal-body"></div>
+            <div class="modal-footer" id="modalFooter"></div>
+        </div>
+    </div>
 </body>
 </html>

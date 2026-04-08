@@ -87,7 +87,7 @@ function openModal(tech, projectId) {
         modalBody.style.background = '#0a0a0a';
     }
 
-    let footerHTML = `<a href="mailto:keotlhapane011@gmail.com" class="neon-btn primary small">Discuss this data</a>`;
+    let footerHTML = `<a href="https://wa.me/27663300304" class="neon-btn primary small" target="_blank">Discuss this data</a>`;
     
     if (projectData[projectId].githubLink) {
         footerHTML = `<a href="${projectData[projectId].githubLink}" target="_blank" class="neon-btn outline small" style="margin-right: 15px;"><i class="fab fa-github"></i> View Full Architecture</a>` + footerHTML;
