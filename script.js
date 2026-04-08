@@ -20,31 +20,6 @@ document.querySelectorAll('.hidden').forEach((el) => {
 
 // --- PROJECT DATABASE ---
 const projectData = {
-    project1: {
-        sql: `-- SQL Query: Q3 Revenue Optimization
-SELECT 
-    Region,
-    SUM(Revenue) as Total_Revenue,
-    AVG(Discount_Applied) as Avg_Discount
-FROM Sales_Data
-WHERE Quarter = 'Q3'
-GROUP BY Region
-ORDER BY Total_Revenue DESC;`,
-        
-        python: `# Python: Data Cleaning Script
-import pandas as pd
-
-df = pd.read_csv('raw_crm_data.csv')
-df.dropna(subset=['Revenue'], inplace=True)
-df['Discount_Applied'].fillna(0, inplace=True)
-print(f"Cleaned {len(df)} rows ready for analysis.")`,
-        
-        powerbi: `To embed an actual Power BI dashboard here without leaving the site:
-1. Go to Power BI Service -> File -> Embed Report -> Publish to Web.
-2. Copy the <iframe> code.
-3. Paste the iframe HTML inside this string in script.js.`
-    },
-    
     // MySQL Layoffs Project
     project2: {
         sql: `-- EXECUTIVE SUMMARY: Global Layoffs Data Architecture
@@ -88,7 +63,6 @@ SELECT * FROM Company_Year_Rank WHERE Ranking <= 5;
 /* Note: The full 200+ line pipeline includes complete staging 
    environments, null value imputation, and standardization logic. */`,
         
-        // Exact GitHub link for recruiters
         githubLink: "https://github.com/DIMECULTIVA/KeoDataAnalyst/blob/main/Company%20Layoffs%20Cleaning%20and%20Exploratory%20Project.sql"
     }
 };
@@ -100,13 +74,9 @@ const modalBody = document.getElementById('modalBody');
 const modalFooter = document.getElementById('modalFooter');
 
 function openModal(tech, projectId) {
-    // Set Title
     modalTitle.innerText = `${tech.toUpperCase()} - Code & Context`;
-    
-    // Fetch appropriate data
     const dataContent = projectData[projectId][tech];
     
-    // Handle iframes vs pure code
     if(dataContent.includes('<iframe')) {
         modalBody.innerHTML = dataContent;
         modalBody.style.fontFamily = 'inherit';
@@ -117,17 +87,13 @@ function openModal(tech, projectId) {
         modalBody.style.background = '#0a0a0a';
     }
 
-    // Build the footer buttons dynamically
     let footerHTML = `<a href="mailto:keotlhapane011@gmail.com" class="neon-btn primary small">Discuss this data</a>`;
     
-    // If a GitHub link exists for this project, add the button
     if (projectData[projectId].githubLink) {
         footerHTML = `<a href="${projectData[projectId].githubLink}" target="_blank" class="neon-btn outline small" style="margin-right: 15px;"><i class="fab fa-github"></i> View Full Architecture</a>` + footerHTML;
     }
     
     modalFooter.innerHTML = footerHTML;
-
-    // Show Modal
     modal.style.display = 'flex';
 }
 
@@ -135,7 +101,6 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-// Close modal if user clicks outside the glass box
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
