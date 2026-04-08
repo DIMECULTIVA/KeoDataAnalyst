@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Keorapetse Tlhapane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="floating-contact">
+        <a href="https://wa.me/27663300303" class="neon-btn icon-btn"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <nav>
+        <div class="logo">KT<span>.</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home & About</a>
+            <a href="projects.html" class="active">Data Projects</a>
+            <a href="mailto:keotlhapane011@gmail.com" class="contact-link">Contact</a>
+        </div>
+    </nav>
+
+    <section class="portfolio-section hidden">
+        <h1 class="neon-text-purple text-center">Data Architectures & Dashboards</h1>
+        <p class="text-center mb-3">Click on the technologies below to view the inner workings without leaving this page.</p>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-thumb">
+                    <img src="dashboard1-thumb.jpg" alt="Sales Performance Dashboard">
+                    <div class="overlay">Sales Performance Analysis</div>
+                </div>
+                <div class="project-info">
+                    <h3>Q3 Revenue Optimization</h3>
+                    <p>Cleaned 500k+ rows of CRM data to identify pricing inefficiencies.</p>
+                    <div class="tech-stack-buttons">
+                        <button class="neon-chip" onclick="openModal('sql', 'project1')">SQL</button>
+                        <button class="neon-chip" onclick="openModal('powerbi', 'project1')">Power BI</button>
+                        <button class="neon-chip" onclick="openModal('python', 'project1')">Python</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-thumb">
+                    <img src="layoffs-thumb.jpg" alt="Tech Layoffs Analysis">
+                    <div class="overlay">MySQL Data Cleaning & EDA</div>
+                </div>
+                <div class="project-info">
+                    <h3>Global Tech Layoffs Pipeline</h3>
+                    <p>Built a robust SQL staging environment to clean raw dataset. Utilized Common Table Expressions (CTEs) and Window Functions to extract rolling trends and rank peak corporate layoffs by year.</p>
+                    <div class="tech-stack-buttons">
+                        <button class="neon-chip" onclick="openModal('sql', 'project2')">View SQL Architecture</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="dataModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="neon-text-cyan">Project Data</h2>
+            <div id="modalBody" class="modal-body">
+                </div>
+            <div class="modal-footer" id="modalFooter">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
