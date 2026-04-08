@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#050505">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Keorapetse Tlhapane</title>
-    
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="floating-contact">
-        <a href="https://wa.me/27663300303" class="neon-btn icon-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/27663300304" class="neon-btn icon-btn"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <nav>
@@ -33,7 +28,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-thumb">
-                    <img src="Layoffs-1200.jpg" alt="Tech Layoffs Analysis" loading="lazy">
+                    <img src="Layoffs-1200.jpg" alt="Tech Layoffs Analysis">
                     <div class="overlay">MySQL Data Cleaning & EDA</div>
                 </div>
                 <div class="project-info">
@@ -47,13 +42,17 @@
         </div>
     </section>
 
-    <div id="dataModal" class="modal" aria-hidden="true">
+    <div id="dataModal" class="modal">
         <div class="modal-content glass">
-            <span class="close-btn" onclick="closeModal()" aria-label="Close">&times;</span>
+            <span class="close-btn" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle" class="neon-text-cyan">Project Data</h2>
-            <div id="modalBody" class="modal-body"></div>
-            <div class="modal-footer" id="modalFooter"></div>
+            <div id="modalBody" class="modal-body">
+                </div>
+            <div class="modal-footer" id="modalFooter">
+                </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

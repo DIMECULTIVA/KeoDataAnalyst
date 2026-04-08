@@ -1,4 +1,3 @@
-// --- SCROLL ANIMATIONS (Motion Effects) ---
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -18,9 +17,7 @@ document.querySelectorAll('.hidden').forEach((el) => {
     observer.observe(el);
 });
 
-// --- PROJECT DATABASE ---
 const projectData = {
-    // MySQL Layoffs Project
     project2: {
         sql: `-- EXECUTIVE SUMMARY: Global Layoffs Data Architecture
 -- Objective: Clean raw HR data, remove anomalies, and extract longitudinal trends.
@@ -67,7 +64,6 @@ SELECT * FROM Company_Year_Rank WHERE Ranking <= 5;
     }
 };
 
-// --- MODAL LOGIC ---
 const modal = document.getElementById('dataModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
@@ -80,14 +76,14 @@ function openModal(tech, projectId) {
     if(dataContent.includes('<iframe')) {
         modalBody.innerHTML = dataContent;
         modalBody.style.fontFamily = 'inherit';
-        modalBody.style.background = '#fff'; 
+        modalBody.style.background = '#fff';
     } else {
         modalBody.innerText = dataContent;
         modalBody.style.fontFamily = 'monospace';
         modalBody.style.background = '#0a0a0a';
     }
 
-    let footerHTML = `<a href="https://wa.me/27663300304" class="neon-btn primary small" target="_blank">Discuss this data</a>`;
+    let footerHTML = `<a href="mailto:keotlhapane011@gmail.com" class="neon-btn primary small">Discuss this data</a>`;
     
     if (projectData[projectId].githubLink) {
         footerHTML = `<a href="${projectData[projectId].githubLink}" target="_blank" class="neon-btn outline small" style="margin-right: 15px;"><i class="fab fa-github"></i> View Full Architecture</a>` + footerHTML;
